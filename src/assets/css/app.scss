@@ -1,0 +1,28 @@
+@import "_tools/variables";
+@import "_tools/mixins";
+@import "_tools/_utilities";
+
+//@import "_base/default";
+@import "_base/fonts";
+//@import "_base/custom";
+
+@import "_base/reset";
+@import "_base/_header";
+@import "_base/_about";
+@import "_base/_editor";
+@import "_base/_here";
+@import "_base/_price";
+
+body{
+  // width: 100%;
+  // padding-left: 10px;
+  // padding-right: 10px;
+  // padding: 0 10px;
+}
+
+section {
+  padding: 0 10px;
+}
+
+
+
