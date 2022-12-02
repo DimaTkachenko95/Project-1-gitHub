@@ -2,6 +2,7 @@
  * Include gulp plugins
  */
 const gulp = require('gulp');
+var ghPages = require('gulp-gh-pages');
 const argv = require('yargs').argv;
 const browserSync = require('browser-sync').create();
 const nunjucks = require('gulp-nunjucks');
@@ -299,3 +300,8 @@ exports.default = gulp.series(
     gulp.parallel(njk, scss, script, image, font),
     gulp.parallel(browsersync, watch)
 );
+
+gulp.task('deploy', function() {
+    return gulp.src('./build/**/*')
+        .pipe(ghPages());
+});
